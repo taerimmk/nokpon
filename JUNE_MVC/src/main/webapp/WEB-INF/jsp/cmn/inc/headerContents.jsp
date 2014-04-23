@@ -1,90 +1,101 @@
-<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
+<%@ page language="java" contentType="text/html; charset=utf-8"
+	pageEncoding="utf-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-	<div id="head-nav" class="navbar navbar-default">
-				<div class="container-fluid">
-					<div class="navbar-collapse">
-						<ul class="nav navbar-nav navbar-right user-nav">
-							<li class="dropdown profile_menu"><a href="#"
-								class="dropdown-toggle" data-toggle="dropdown"><img
-									alt="Avatar" src="images/avatar6-2.jpg" /><span>Jane
-										Smith</span> <b class="caret"></b></a>
-								<ul class="dropdown-menu">
-									<li><a href="#">My Account</a></li>
-									<li><a href="#">Profile</a></li>
-									<li><a href="#">Messages</a></li>
-									<li class="divider"></li>
-									<li><a href="#">Sign Out</a></li>
-								</ul></li>
-						</ul>
-						<ul class="nav navbar-nav not-nav">
-							<li class="button dropdown"><a href="javascript:;"
-								class="dropdown-toggle" data-toggle="dropdown"><i
-									class=" fa fa-inbox"></i></a>
-								<ul class="dropdown-menu messages">
-									<li>
-										<div class="nano nscroller">
-											<div class="content">
-												<ul>
-													<li><a href="#"> <img src="images/avatar2.jpg"
-															alt="avatar" /><span class="date pull-right">13
-																Sept.</span> <span class="name">Daniel</span> Hey! How are you?
-													</a></li>
-													<li><a href="#"> <img src="images/avatar_50.jpg"
-															alt="avatar" /><span class="date pull-right">20
-																Oct.</span><span class="name">Adam</span> Hi! Can you fix my
-															phone?
-													</a></li>
-													<li><a href="#"> <img src="images/avatar4_50.jpg"
-															alt="avatar" /><span class="date pull-right">2
-																Nov.</span><span class="name">Michael</span> Regards!
-													</a></li>
-													<li><a href="#"> <img src="images/avatar3_50.jpg"
-															alt="avatar" /><span class="date pull-right">2
-																Nov.</span><span class="name">Lucy</span> Hello, my name is
-															Lucy
-													</a></li>
-												</ul>
-											</div>
-										</div>
-										<ul class="foot">
-											<li><a href="#">View all messages </a></li>
-										</ul>
-									</li>
-								</ul></li>
-							<li class="button dropdown"><a href="javascript:;"
-								class="dropdown-toggle" data-toggle="dropdown"><i
-									class="fa fa-globe"></i><span class="bubble">2</span></a>
-								<ul class="dropdown-menu">
-									<li>
-										<div class="nano nscroller">
-											<div class="content">
-												<ul>
-													<li><a href="#"><i class="fa fa-cloud-upload info"></i><b>Daniel</b>
-															is now following you <span class="date">2 minutes
-																ago.</span></a></li>
-													<li><a href="#"><i class="fa fa-male success"></i>
-															<b>Michael</b> commented on your link <span class="date">15
-																minutes ago.</span></a></li>
-													<li><a href="#"><i class="fa fa-bug warning"></i>
-															<b>Mia</b> commented on post <span class="date">30
-																minutes ago.</span></a></li>
-													<li><a href="#"><i
-															class="fa fa-credit-card danger"></i> <b>Andrew</b> sent
-															you a request <span class="date">1 hour ago.</span></a></li>
-												</ul>
-											</div>
-										</div>
-										<ul class="foot">
-											<li><a href="#">View all activity </a></li>
-										</ul>
-									</li>
-								</ul></li>
-							<li class="button"><a
-								class="toggle-menu menu-right push-body" href="javascript:;"
-								class="speech-button"><i class="fa fa-comments"></i></a></li>
-						</ul>
+<header class="header-wrap">
+	
+	<div class="container">
+		
+		<div class="row">
+		
+			<div class="col-md-3">
 
-					</div>
-					<!--/.nav-collapse animate-collapse -->
+				<div class="logo">
+					<a href="http://aonethemes.com/infinitygrid"
+						title="http://aonethemes.com/infinitygrid"> <img
+						src="http://aonethemes.com/infinitygrid/wp-content/uploads/sites/10/2014/01/logonormal3.png "
+						data-at2x="http://aonethemes.com/infinitygrid/wp-content/uploads/sites/10/2014/01/logo2x3.png" />
+					</a>
 				</div>
+				<!--end logo-->
 			</div>
+
+			<div class="col-md-9 rel">
+				<div class="responsive-trig" id="simple-menu" href="#sidr"></div>
+				<nav class="menuwrap" role="main">
+					<div class="menu-primary-container">
+						<ul id="menu-primary-1" class="sf-menu-primary">
+							<li
+								class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-40"><a
+								href="http://aonethemes.com/infinitygrid/">Home</a></li>
+							<li
+								class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-165"><a
+								href="http://#">Demo pages</a>
+								<ul class="sub-menu">
+									<li
+										class="menu-item menu-item-type-custom menu-item-object-custom menu-item-104"><a
+										href="http://aonethemes.com/infinitygrid/5/">Comments</a></li>
+									<li
+										class="menu-item menu-item-type-post_type menu-item-object-page menu-item-168"><a
+										href="http://aonethemes.com/infinitygrid/single-page-right-sidebar/">Right
+											sidebar</a></li>
+									<li
+										class="menu-item menu-item-type-post_type menu-item-object-page menu-item-167"><a
+										href="http://aonethemes.com/infinitygrid/single-page-left-sidebar/">Left
+											sidebar</a></li>
+									<li
+										class="menu-item menu-item-type-post_type menu-item-object-page menu-item-166"><a
+										href="http://aonethemes.com/infinitygrid/single-page-full-width/">Full
+											width</a></li>
+								</ul></li>
+							<li
+								class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-38"><a
+								href="http://#">Post formats</a>
+								<ul class="sub-menu">
+									<li
+										class="menu-item menu-item-type-taxonomy menu-item-object-post_format menu-item-33"><a
+										href="http://aonethemes.com/infinitygrid/type/image/">Image</a></li>
+									<li
+										class="menu-item menu-item-type-taxonomy menu-item-object-post_format menu-item-34"><a
+										href="http://aonethemes.com/infinitygrid/type/audio/">Audio</a></li>
+									<li
+										class="menu-item menu-item-type-taxonomy menu-item-object-post_format menu-item-35"><a
+										href="http://aonethemes.com/infinitygrid/type/quote/">Quote</a></li>
+									<li
+										class="menu-item menu-item-type-taxonomy menu-item-object-post_format menu-item-36"><a
+										href="http://aonethemes.com/infinitygrid/type/gallery/">Gallery</a></li>
+									<li
+										class="menu-item menu-item-type-taxonomy menu-item-object-post_format menu-item-37"><a
+										href="http://aonethemes.com/infinitygrid/type/video/">Video</a></li>
+									<li
+										class="menu-item menu-item-type-custom menu-item-object-custom menu-item-39"><a
+										href="http://aonethemes.com/infinitygrid/2014/01/20/standard-post/">Standard</a></li>
+								</ul></li>
+							<li
+								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-101"><a
+								href="http://aonethemes.com/infinitygrid/shortcodes-all-built-into-your-kitchen-sink/">Shortcodes</a></li>
+							<li
+								class="menu-item menu-item-type-custom menu-item-object-custom menu-item-103"><a
+								href="#" id="login">Log In</a>
+								</li>
+						</ul>
+					</div>
+				</nav>
+
+				<!--end navbar primary-->
+			</div>
+
+
+		</div>
+		<!--end row-->
+	</div>
+	<!--end container-->
+</header>
+<!-- end of menu and logo section -->
+<script type='text/javascript'>
+$(function(){
+	$("#login").on("click", function(){
+		return false;
+	});
+});
+</script>
+

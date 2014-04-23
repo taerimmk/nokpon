@@ -42,17 +42,17 @@ public class JpaUserRepositoryImpl implements UserRepository {
 
     @Override
     public UserInfo selectUser(int seq) {
-        Query query = this.em.createQuery("SELECT user FROM UserInfo user WHERE user.seq =:seq");
+        Query query = this.em.createQuery("SELECT userInfo FROM UserInfo userInfo WHERE userInfo.seq =:seq");
         query.setParameter("seq", seq);
         return (UserInfo) query.getSingleResult();
     }
     
     
     @Override
-	public UserInfo getUser(String id) {
+	public UserInfo getUser(String userId) {
 		
-		Query query = this.em.createQuery("SELECT userInfo FROM UserInfo userInfo left join fetch userInfo.roleInfos WHERE userInfo.id =:id");
-		query.setParameter("id", id);
+		Query query = this.em.createQuery("SELECT userInfo FROM UserInfo userInfo left join fetch userInfo.roleInfos WHERE userInfo.userId =:userId");
+		query.setParameter("userId", userId);
 		
 		return (UserInfo) query.getSingleResult();
 	}

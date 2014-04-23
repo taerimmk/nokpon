@@ -21,24 +21,17 @@ public class UserController {
 	
 	private static final Logger logger = LoggerFactory.getLogger(UserController.class);
 	
-	
-	private final UserService userService;
-
-
-    @Autowired
-    public UserController(UserService userService) {
-        this.userService = userService;
-    }
+	@Autowired
+	private UserService userService;
+    
 	/**
 	 * Simply selects the home view to render by returning its name.
 	 */
-	@RequestMapping(value = "/selectUser", method = RequestMethod.GET)
+	@RequestMapping(value = "/registerUser", method = RequestMethod.GET)
 	public String home(Locale locale, Model model) {
 		UserInfo selectUser = userService.selectUser(1);
 		
-		model.addAttribute("selectUser", selectUser );
-		
-		return "user/home";
+		return "user/register";
 	}
 	
 }
