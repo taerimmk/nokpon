@@ -47,8 +47,12 @@ public interface UserRepository {
 
     
     UserInfo selectUser(int seq) throws DataAccessException;
+    
+    Long selectUserId(String userId) throws DataAccessException;
 
     UserInfo getUser(String username);
+    
+    
 
 
 }

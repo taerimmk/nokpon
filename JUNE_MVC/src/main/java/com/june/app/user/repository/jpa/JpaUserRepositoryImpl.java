@@ -46,7 +46,13 @@ public class JpaUserRepositoryImpl implements UserRepository {
         query.setParameter("seq", seq);
         return (UserInfo) query.getSingleResult();
     }
-    
+
+    @Override
+    public Long selectUserId(String userId) {
+    	Query query = this.em.createQuery("SELECT count(userInfo) FROM UserInfo userInfo WHERE userInfo.userId =:userId");
+        query.setParameter("userId", userId);
+        return (Long) query.getSingleResult();
+    }
     
     @Override
 	public UserInfo getUser(String userId) {

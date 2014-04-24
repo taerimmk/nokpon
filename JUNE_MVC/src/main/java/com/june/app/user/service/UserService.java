@@ -29,6 +29,6 @@ public interface UserService {
 
    
     public UserInfo selectUser(int seq) throws DataAccessException;
-    //public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException;
+    public Long selectUserId(String userId) throws DataAccessException;
    
 }

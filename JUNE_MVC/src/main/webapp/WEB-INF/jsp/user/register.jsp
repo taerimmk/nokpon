@@ -38,19 +38,22 @@
 												action="http://aonethemes.com/infinitygrid/wp-comments-post.php"
 												method="post" id="commentform" class="comment-form">
 												<p class="comment-form-comment">
-													<label for="author">아이디 <span class="required">*</span></label>
-													<input id="author" name="author" type="text" value=""
-														size="48" aria-required="true" style="width: 100%;" />
+													<label for="userId">아이디 <span class="required">*</span></label>
+													<input id="userId" name="userId" type="text" value=""
+														class="auth" size="48" aria-required="true"
+														style="width: 100%;" />
 												</p>
 												<p class="comment-form-comment" style="margin-bottom: 20px;">
-													<input name="submit" type="button" id="" value="중복확인" class="submit"
+													<input name="submit" type="button" id="goDupAjax"
+														value="중복확인" class="submit" style="width: 100%;" />
+													<!-- <input name="submit" type="button" id="" value="중복확인" class="submit"
 														style="width: 100%;" data-toggle="modal"
-														data-target="#myModal" />
+														data-target="#myModal" /> -->
 												</p>
 												<p class="comment-form-comment">
 													<label for="url">비밀번호 <span class="required">*</span></label>
 													<input id="url" name="url" type="text" value=""
-														style="width: 100%;" />
+														class="auth" style="width: 100%;" />
 												</p>
 												<p class="comment-form-comment">
 													<label for="url">비밀번호 확인<span class="required">*</span></label>
@@ -69,8 +72,8 @@
 														style="width: 100%;" />
 												</p>
 												<p class="comment-form-comment">
-													<input name="submit" type="button" id="submit" value="가입하기" class="submit"
-														style="width: 100%;" />
+													<input name="submit" type="button" id="submit" value="가입하기"
+														class="submit" style="width: 100%;" />
 												</p>
 
 											</form>
@@ -111,7 +114,8 @@
 					<p>
 						<input id="author" name="author" type="text" value="" size=""
 							aria-required="true" style="width: 70%;" /> <input name="submit"
-							type="button" id="" value="가입하기" style="width: 20%;margin-left: 10px;" class="submitRow"/>
+							type="button" id="" value="중복확인"
+							style="width: 20%; margin-left: 10px;" class="submitRow" />
 					</p>
 				</div>
 				<div class="modal-footer">
@@ -124,6 +128,33 @@
 	<script type="text/javascript">
 		$(function() {
 			//$('#myModal').modal();
+			$("#goDupAjax").on('click', function() {
+				/** ID 정규시*/
+				var regExp = /^[a-z0-9_]{4,20}$/;
+				var userId = $("#userId").val();
+				if (regExp.test(userId)) {
+					$.ajax({
+						type : "POST",
+						url : "<c:url value='/idDupCheck.json'/>",
+						data : {
+							userId : userId
+						}
+					}).done(function(json) {
+						var result = json.result;
+						if(Boolean(result) && result < 1){
+							alert("사용할수 있는 아이디 입니다.");
+						} else {
+							alert("사용할수 없는 아이디 입니다.");
+							return false;
+						}
+						
+					});
+					return false;
+				} else {
+					alert("아이디는 4~20 자리의 영문,숫자만 허용됩니다.");
+					return false
+				}
+			});
 		});
 	</script>
 </body>

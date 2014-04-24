@@ -51,6 +51,12 @@ public class UserServiceImpl implements UserService {
         return userRepository.selectUser(seq);
     }
     
+    @Override
+    @Transactional(readOnly = true)
+    public Long selectUserId(String userId) throws DataAccessException {
+        return userRepository.selectUserId(userId);
+    }
+    
     
     /*@SuppressWarnings("deprecation")
 	@Override

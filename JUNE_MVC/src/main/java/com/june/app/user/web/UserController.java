@@ -9,6 +9,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.june.app.user.model.UserInfo;
 import com.june.app.user.service.UserService;
@@ -18,20 +19,29 @@ import com.june.app.user.service.UserService;
  */
 @Controller
 public class UserController {
-	
-	private static final Logger logger = LoggerFactory.getLogger(UserController.class);
-	
+
+	private static final Logger logger = LoggerFactory
+			.getLogger(UserController.class);
+
 	@Autowired
 	private UserService userService;
-    
+
 	/**
 	 * Simply selects the home view to render by returning its name.
 	 */
 	@RequestMapping(value = "/registerUser", method = RequestMethod.GET)
 	public String home(Locale locale, Model model) {
-		UserInfo selectUser = userService.selectUser(1);
-		
+		// UserInfo selectUser = userService.selectUser(1);
+
 		return "user/register";
 	}
-	
+
+	@RequestMapping(value = "/idDupCheck", method = RequestMethod.POST)
+	public String home(
+			@RequestParam(value = "userId", required = true) String UserId,
+			Model model) {
+		Long selectUserCnt = userService.selectUserId(UserId);
+		model.addAttribute("result", selectUserCnt);
+		return "user/register";
+	}
 }

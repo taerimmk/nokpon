@@ -1246,7 +1246,7 @@ border-bottom:1px solid #d5d5d5;
 .comment-form-comment label
 { float:left; width:100%; margin: 0 0 5px 0; font-weight:normal!important;}
 
-input#email, input#url, input#author
+input#email, input#url, input#author, input.auth
 { float:left; border-radius:0px; border:0px solid #e5e5e5; background-color:#f0f0f0; color:#898989; font-size:12px; outline:0; padding:5px 10px; margin:0 0 10px 0;
 
 -webkit-box-shadow: inset 0px 0px 0px 0px rgba(255, 255, 255, 0);
@@ -1266,7 +1266,8 @@ border-radius:3px;
 
 input#email:focus,
 input#url:focus,
-input#author:focus
+input#author:focus,
+input.auth:focus
 { background-color:#f4f4f4; border:0px solid #bbb; outline:0;
 -webkit-box-shadow: inset 0px 0px 0px 0px rgba(255, 255, 255, 0);
 -moz-box-shadow:    inset 0px 0px 0px 0px rgba(255, 255, 255, 0);
@@ -2681,7 +2682,7 @@ box-shadow:         inset 0px 0px 0px 0px rgba(255, 255, 255, 0);
 }
 }
 
-button, html input[type="button"], input[type="reset"], input[type="submit"] {border:0px; border-radius:3px; background-color:#bfbfbf; color:#757575; padding:5px 15px; outline:0;} 
+/* button, html input[type="button"], input[type="reset"], input[type="submit"] {border:0px; border-radius:3px; background-color:#bfbfbf; color:#757575; padding:5px 15px; outline:0;} */ 
 
 .singlewrap table {margin-bottom:30px;}
 .singlewrap tbody {margin:20px 0; padding-bottom:20px; }
