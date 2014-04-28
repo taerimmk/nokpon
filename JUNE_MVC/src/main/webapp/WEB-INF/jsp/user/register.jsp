@@ -145,7 +145,7 @@ color :red;
 				if (regExp.test(userId)) {
 					$.ajax({
 						type : "POST",
-						url : "<c:url value='/idDupCheck.json'/>",
+						url : "<c:url value='/register/idDupCheck.json'/>",
 						data : {
 							userId : userId
 						}
@@ -177,7 +177,7 @@ color :red;
 				 var val = validation();
 				console.log("##"+val);
 				if (val){
-					$("#frm").attr("action", "<c:url value='/registerUser'/>").submit();	
+					$("#frm").attr("action", "<c:url value='/register/registerUser'/>").submit();	
 				}
 				return false;
 			});
@@ -233,5 +233,12 @@ color :red;
 			return true;
 		};
 	</script>
+<c:if test="${'98' eq result}">
+<script type="text/javascript">
+$(function() {
+	alert("이미존재하는 아이디 입니다.");
+});
+</script>
+</c:if>	
 </body>
 </html>

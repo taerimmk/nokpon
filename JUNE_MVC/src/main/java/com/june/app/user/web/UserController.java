@@ -41,9 +41,9 @@ public class UserController {
 	
 	@RequestMapping(value = "/idDupCheck", method = RequestMethod.POST)
 	public String home(
-			@RequestParam(value = "userId", required = true) String UserId,
+			@RequestParam(value = "userId", required = true) String userId,
 			Model model) {
-		Long selectUserCnt = userService.selectUserId(UserId);
+		Long selectUserCnt = userService.selectUserId(userId);
 		model.addAttribute("result", selectUserCnt);
 		
 		return "user/register";
@@ -57,7 +57,15 @@ public class UserController {
 			model.addAttribute("userInfo", userInfo);
 			return "user/register";
 		} else {
-			UserInfo resultVo = userService.registerUser(userInfo);
+			String userId = userInfo.getUserId();
+			Long selectUserCnt = userService.selectUserId(userId);
+			if (selectUserCnt < 0){
+				userService.registerUser(userInfo);
+			}else{
+				model.addAttribute("result", "98");
+				return "user/register";
+			}
+			
 		}
 
 		return "redirect:/login";

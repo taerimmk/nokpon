@@ -41,7 +41,7 @@ public class LoginController {
 
 	@RequestMapping(value = "/accessdenied", method = RequestMethod.GET)
 	public String getFailurePage(Model model) {
-		return "failure";
+		return "login/failure";
 	}
 
 	@RequestMapping(value = "/logout", method = RequestMethod.GET)

@@ -15,6 +15,8 @@
  */
 package com.june.app.user.model;
 
+import java.util.Date;
+
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -47,6 +49,9 @@ public class RoleInfo {
 	@Column(name = "role")
 	@NotEmpty
 	private String role;
+	
+	@Column(name = "regi_date")
+	private Date regiDate;
 
 	@ManyToOne(cascade = { CascadeType.PERSIST, CascadeType.MERGE,
 			CascadeType.REFRESH })
@@ -68,6 +73,15 @@ public class RoleInfo {
 
 	public void setRole(String role) {
 		this.role = role;
+	}
+	
+
+	public Date getRegiDate() {
+		return regiDate;
+	}
+
+	public void setRegiDate(Date regiDate) {
+		this.regiDate = regiDate;
 	}
 
 	@JsonBackReference

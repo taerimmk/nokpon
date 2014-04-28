@@ -15,8 +15,7 @@
  */
 package com.june.app.user.service.impl;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.Date;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
@@ -29,63 +28,60 @@ import com.june.app.user.repository.UserRepository;
 import com.june.app.user.service.UserService;
 
 /**
- * Mostly used as a facade for all Petclinic controllers
- * Also a placeholder for @Transactional and @Cacheable annotations
+ * Mostly used as a facade for all Petclinic controllers Also a placeholder for @Transactional
+ * and @Cacheable annotations
  *
  * @author Michael Isvy
  */
 @Service
 public class UserServiceImpl implements UserService {
 
-  
-    private UserRepository userRepository;
-  
+	private UserRepository userRepository;
 
-    @Autowired
-    public UserServiceImpl(UserRepository userRepository) {
-        
-        this.userRepository = userRepository;
-    }
+	@Autowired
+	public UserServiceImpl(UserRepository userRepository) {
 
- 
+		this.userRepository = userRepository;
+	}
 
-    @Override
-    @Transactional(readOnly = true)
-    public UserInfo selectUser(int seq) throws DataAccessException {
-        return userRepository.selectUser(seq);
-    }
-    
-    @Override
-    @Transactional(readOnly = true)
-    public Long selectUserId(String userId) throws DataAccessException {
-        return userRepository.selectUserId(userId);
-    }
-    @Override
-    @Transactional(readOnly = true)
-    public UserInfo registerUser(UserInfo userInfo) throws DataAccessException {
-    	userInfo.setStatus("A");
-    	//Set<RoleInfo> roleInfos = new HashSet<RoleInfo>(); 
-    	
-    	UserInfo userInfoResult = userRepository.registerUser(userInfo);
-    	RoleInfo roleInfo = new RoleInfo();
-    	roleInfo.setRole("ROLE_USER");
-    	roleInfo.setUserInfo(userInfoResult);
-    	
-    	userRepository.registerRole(roleInfo);
-    	
-        return userInfoResult;
-    }
-    
-    /*@SuppressWarnings("deprecation")
 	@Override
-	public UserDetails loadUserByUsername(String username)
-			throws UsernameNotFoundException, DataAccessException
-	{
-		System.out.println("Getting access details from employee dao !!");
-        
-		// Ideally it should be fetched from database and populated instance of
-		// #org.springframework.security.core.userdetails.User should be returned from this method
-		//UserDetails user = new User(username, "password", true, true, true, true, new GrantedAuthority[]{ new GrantedAuthorityImpl("ROLE_USER") });
-		return user;
-	}*/
+	@Transactional(readOnly = true)
+	public UserInfo selectUser(int seq) throws DataAccessException {
+		return userRepository.selectUser(seq);
+	}
+
+	@Override
+	@Transactional(readOnly = true)
+	public Long selectUserId(String userId) throws DataAccessException {
+		return userRepository.selectUserId(userId);
+	}
+
+	@Override
+	@Transactional(readOnly = true)
+	public UserInfo registerUser(UserInfo userInfo) throws DataAccessException {
+
+		userInfo.setStatus("A");
+		UserInfo userInfoResult = userRepository.registerUser(userInfo);
+		RoleInfo roleInfo = new RoleInfo();
+		roleInfo.setRole("ROLE_USER");
+		roleInfo.setUserInfo(userInfoResult);
+		roleInfo.setRegiDate(new Date());
+		userRepository.registerRole(roleInfo);
+		return userInfoResult;
+
+	}
+
+	/*
+	 * @SuppressWarnings("deprecation")
+	 * 
+	 * @Override public UserDetails loadUserByUsername(String username) throws
+	 * UsernameNotFoundException, DataAccessException {
+	 * System.out.println("Getting access details from employee dao !!");
+	 * 
+	 * // Ideally it should be fetched from database and populated instance of
+	 * // #org.springframework.security.core.userdetails.User should be returned
+	 * from this method //UserDetails user = new User(username, "password",
+	 * true, true, true, true, new GrantedAuthority[]{ new
+	 * GrantedAuthorityImpl("ROLE_USER") }); return user; }
+	 */
 }
