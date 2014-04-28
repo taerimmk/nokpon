@@ -35,27 +35,28 @@
 											<!-- <h3 id="reply-title" class="comment-reply-title">LOG IN
 											</h3> -->
 											<form
-												action="http://aonethemes.com/infinitygrid/wp-comments-post.php"
-												method="post" id="commentform" class="comment-form">
+												action="<c:url value='j_spring_security_check'/>" method="POST"
+												id="commentform" class="comment-form">
 												<p class="comment-form-comment">
 													<label for="author">아이디 <span class="required">*</span></label>
-													<input id="author" name="author" type="text" value=""
-														size="48" aria-required="true" style="width: 100%;" />
+													<input id="username" name="j_username" type="text" value=""
+														size="48" aria-required="true" class="auth form-control"/>
 												</p>
 												<p class="comment-form-comment">
 													<label for="url">비밀번호 <span class="required">*</span></label>
-													<input id="url" name="url" type="text" value=""
-														style="width: 100%;" />
+													<input id="password" name="j_password" type="password" value=""
+														class="auth form-control" />
 												</p>
-											</form>
+											
 											<p class="comment-form-comment">
-												<input name="submit" type="button" id="submit"
+												<input name="" type="submit" id="submit"
 													value="LOG IN" style="width: 100% !important;" />
 											</p>
 											<p class="comment-form-comment">
-												<a href="<c:url value="/registerUser" />" ><input name="submit" type="button" id="submit"
-													value="REGISTER" style="width: 100% !important;" /></a>
+												<a href="<c:url value="/register/registerUser" />" ><input name="" type="button" id=""
+													value="REGISTER" class="submit" style="width: 100%;" /></a>
 											</p>
+											</form>
 										</div>
 										<!-- #respond -->
 

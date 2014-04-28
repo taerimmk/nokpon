@@ -26,7 +26,10 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import javax.persistence.Transient;
+import javax.validation.constraints.Pattern;
 
+import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotEmpty;
 
 import com.fasterxml.jackson.annotation.JsonManagedReference;
@@ -49,6 +52,7 @@ public class UserInfo {
 	
 	@Column(name = "USER_ID")
     @NotEmpty
+    @Pattern(regexp ="^[a-z0-9_]{4,20}$")
 	protected String userId;
 	
 	@Column(name = "name")
@@ -56,6 +60,8 @@ public class UserInfo {
 	protected String name;
 	
 	@Column(name = "email")
+	@NotEmpty
+	@Email
 	protected String email;
 	
 	@Column(name = "status")
@@ -63,10 +69,15 @@ public class UserInfo {
 	
 	
 	@Column(name = "password")
+	@NotEmpty
+	@Pattern(regexp ="^(?=.*[a-zA-Z])(?=.*[!@#$%^*+=-])(?=.*[0-9]).{6,20}$")
 	private String password;
 	
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "userInfo" ,fetch=FetchType.EAGER )
     private Set<RoleInfo> roleInfos;
+	
+	@Transient
+	private String passwordCert;
 	
 	public Integer getSeq() {
 		return seq;
@@ -125,28 +136,21 @@ public class UserInfo {
 		this.roleInfos = roleInfos;
 	}
 
-	
-	/*protected void setRoleInfoInternal(Set<RoleInfo> roleInfos) {
-        this.roleInfos = roleInfos;
-    }
+	public String getPasswordCert() {
+		return passwordCert;
+	}
 
-    protected Set<RoleInfo> getRoleInfosInternal() {
-        if (this.roleInfos == null) {
-            this.roleInfos = new HashSet<RoleInfo>();
-        }
-        return this.roleInfos;
-    }
+	public void setPasswordCert(String passwordCert) {
+		this.passwordCert = passwordCert;
+	}
 
-    public List<RoleInfo> getRoleInfos() {
-        List<RoleInfo> sortedRoleInfos = new ArrayList<RoleInfo>(getRoleInfosInternal());
-        //PropertyComparator.sort(sortedRoleInfo, new MutableSortDefinition("name", true, true));
-        return Collections.unmodifiableList(sortedRoleInfos);
-    }
+	@Override
+	public String toString() {
+		return "UserInfo [seq=" + seq + ", userId=" + userId + ", name=" + name
+				+ ", email=" + email + ", status=" + status + ", password="
+				+ password + ", roleInfos=" + roleInfos + ", passwordCert="
+				+ passwordCert + "]";
+	}
 
-    public void addRoleInfo(RoleInfo roleInfo) {
-    	getRoleInfosInternal().add(roleInfo);
-    	roleInfo.setUserInfo(this);
-    }
-*/		
 
 }

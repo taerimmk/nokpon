@@ -11,8 +11,8 @@
 	};
 	/* ]]> */
 </script>
-<script type='text/javascript'
-	src="<c:url value="/resources/js/scripts.js?ver=3.7.2"/>"></script>
+<%-- <script type='text/javascript'
+	src="<c:url value="/resources/js/scripts.js?ver=3.7.2"/>"></script> --%>
 <script type='text/javascript'
 	src="<c:url value="/resources/js/retina.js?ver=3.8.3"/>"></script>
 

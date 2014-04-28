@@ -37,7 +37,7 @@ public class AuthServiceImpl implements IAuthService, UserDetailsService {
 	@Override
 	public UserDetails loadUserByUsername(String userId)
 			throws UsernameNotFoundException {
-
+		logger.debug("====================userId==================={}",userId);
 		UserInfo userInfos = userRepository.getUser(userId);
 		Collection<SimpleGrantedAuthority> authorities = new ArrayList<SimpleGrantedAuthority>();
 		Set<RoleInfo> roleInfos = userInfos.getRoleInfos();

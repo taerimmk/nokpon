@@ -15,11 +15,15 @@
  */
 package com.june.app.user.service.impl;
 
+import java.util.HashSet;
+import java.util.Set;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.june.app.user.model.RoleInfo;
 import com.june.app.user.model.UserInfo;
 import com.june.app.user.repository.UserRepository;
 import com.june.app.user.service.UserService;
@@ -56,7 +60,21 @@ public class UserServiceImpl implements UserService {
     public Long selectUserId(String userId) throws DataAccessException {
         return userRepository.selectUserId(userId);
     }
-    
+    @Override
+    @Transactional(readOnly = true)
+    public UserInfo registerUser(UserInfo userInfo) throws DataAccessException {
+    	userInfo.setStatus("A");
+    	//Set<RoleInfo> roleInfos = new HashSet<RoleInfo>(); 
+    	
+    	UserInfo userInfoResult = userRepository.registerUser(userInfo);
+    	RoleInfo roleInfo = new RoleInfo();
+    	roleInfo.setRole("ROLE_USER");
+    	roleInfo.setUserInfo(userInfoResult);
+    	
+    	userRepository.registerRole(roleInfo);
+    	
+        return userInfoResult;
+    }
     
     /*@SuppressWarnings("deprecation")
 	@Override

@@ -30,5 +30,6 @@ public interface UserService {
    
     public UserInfo selectUser(int seq) throws DataAccessException;
     public Long selectUserId(String userId) throws DataAccessException;
+    public UserInfo registerUser(UserInfo userInfo) throws DataAccessException;
    
 }

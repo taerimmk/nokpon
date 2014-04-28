@@ -15,6 +15,7 @@
  */
 package com.june.app.user.model;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -28,7 +29,6 @@ import org.hibernate.validator.constraints.NotEmpty;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 
-
 /**
  * Simple JavaBean domain object representing an person.
  * 
@@ -39,37 +39,32 @@ import com.fasterxml.jackson.annotation.JsonBackReference;
 public class RoleInfo {
 
 	@Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "seq")
-	protected Integer seq;
+	private Integer seq;
 	
 	
 	@Column(name = "role")
-    @NotEmpty
-	protected String role;
-	
-	
-	@ManyToOne
-    @JoinColumn(name = "user_seq")
-	//@JoinColumn(name = "user_id", referencedColumnName = "id")
-    private UserInfo userInfo;
+	@NotEmpty
+	private String role;
 
+	@ManyToOne(cascade = { CascadeType.PERSIST, CascadeType.MERGE,
+			CascadeType.REFRESH })
+	@JoinColumn(name = "user_seq")
+	// @JoinColumn(name = "user_id", referencedColumnName = "id")
+	private UserInfo userInfo;
 
 	public Integer getSeq() {
 		return seq;
 	}
 
-
 	public void setSeq(Integer seq) {
 		this.seq = seq;
 	}
-	
-
 
 	public String getRole() {
 		return role;
 	}
-
 
 	public void setRole(String role) {
 		this.role = role;
@@ -80,11 +75,8 @@ public class RoleInfo {
 		return userInfo;
 	}
 
-
 	public void setUserInfo(UserInfo userInfo) {
 		this.userInfo = userInfo;
 	}
-	
-	
-	
+
 }
