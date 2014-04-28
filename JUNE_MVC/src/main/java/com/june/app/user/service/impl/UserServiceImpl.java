@@ -19,6 +19,8 @@ import java.util.Date;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -61,6 +63,10 @@ public class UserServiceImpl implements UserService {
 	public UserInfo registerUser(UserInfo userInfo) throws DataAccessException {
 
 		userInfo.setStatus("A");
+		String userPass = userInfo.getPassword();
+		PasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+		String hashedPassword = passwordEncoder.encode(userPass);
+		userInfo.setPassword(hashedPassword);
 		UserInfo userInfoResult = userRepository.registerUser(userInfo);
 		RoleInfo roleInfo = new RoleInfo();
 		roleInfo.setRole("ROLE_USER");

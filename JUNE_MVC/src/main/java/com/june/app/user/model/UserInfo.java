@@ -70,7 +70,7 @@ public class UserInfo {
 	
 	@Column(name = "password")
 	@NotEmpty
-	@Pattern(regexp ="^(?=.*[a-zA-Z])(?=.*[!@#$%^*+=-])(?=.*[0-9]).{6,20}$")
+	//@Pattern(regexp ="^(?=.*[a-zA-Z])(?=.*[!@#$%^*+=-])(?=.*[0-9]).{6,20}$")
 	private String password;
 	
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "userInfo" ,fetch=FetchType.EAGER )

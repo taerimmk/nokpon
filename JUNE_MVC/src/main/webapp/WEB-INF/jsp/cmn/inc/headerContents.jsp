@@ -26,8 +26,8 @@
 						<ul id="menu-primary-1" class="sf-menu-primary">
 							<li
 								class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-40"><a
-								href="http://aonethemes.com/infinitygrid/">Home</a></li>
-							<li
+								href="<c:url value="/main"/> ">Home</a></li>
+							<!-- <li
 								class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-165"><a
 								href="http://#">Demo pages</a>
 								<ul class="sub-menu">
@@ -46,10 +46,10 @@
 										class="menu-item menu-item-type-post_type menu-item-object-page menu-item-166"><a
 										href="http://aonethemes.com/infinitygrid/single-page-full-width/">Full
 											width</a></li>
-								</ul></li>
+								</ul></li> -->
 							<li
 								class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-38"><a
-								href="http://#">Post formats</a>
+								href="http://#">Circle</a>
 								<ul class="sub-menu">
 									<li
 										class="menu-item menu-item-type-taxonomy menu-item-object-post_format menu-item-33"><a

@@ -7,7 +7,7 @@
 		<div class="row">
 
 
-			<div class="col-md-3">
+			<!-- <div class="col-md-3">
 				<div class="widget-area-footer">
 					<div class="footer-widget-pads">
 						<div id="text-2" class="widget-container widget_text ">
@@ -20,8 +20,8 @@
 						</div>
 					</div>
 				</div>
-				<!--end widget-area-footer -->
-			</div>
+				end widget-area-footer
+			</div> -->
 			<!--end onefourth-->
 
 			<div class="col-md-3">
@@ -96,7 +96,7 @@
 			</div>
 			<!--end onefourth-->
 
-			<div class="col-md-3">
+			<!-- <div class="col-md-3">
 				<div class="widget-area-footer">
 					<div class="footer-widget-pads">
 						<div id="tag_cloud-2" class="widget-container widget_tag_cloud ">
@@ -150,11 +150,11 @@
 						</div>
 					</div>
 				</div>
-				<!--end widget-area-footer -->
-			</div>
+				end widget-area-footer
+			</div> -->
 			<!--end onefourth-->
 
-			<div class="col-md-3">
+			<!-- <div class="col-md-3">
 				<div class="widget-area-footer">
 					<div class="footer-widget-pads">
 						<div id="recent-posts-2"
@@ -180,8 +180,8 @@
 						</div>
 					</div>
 				</div>
-				<!--end widget-area-footer -->
-			</div>
+				end widget-area-footer
+			</div> -->
 			<!--end onefourth-->
 		</div>
 		<!--end this row-->

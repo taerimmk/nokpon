@@ -58,8 +58,11 @@ public class UserController {
 			return "user/register";
 		} else {
 			String userId = userInfo.getUserId();
+			logger.debug("================]userId[======== {}",userId);
 			Long selectUserCnt = userService.selectUserId(userId);
-			if (selectUserCnt < 0){
+			
+			logger.debug("================]selectUserCnt[======== {}",selectUserCnt);
+			if (selectUserCnt == 0 ){
 				userService.registerUser(userInfo);
 			}else{
 				model.addAttribute("result", "98");

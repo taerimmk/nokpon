@@ -25,369 +25,10 @@
 
 							<div id="mainmasonry">
 
-
-								<div class="col-md-4 bump" id="masonryme">
-									<div class="colored nopbump rel">
-										<div
-											class="post-178 post type-post status-publish format-image hentry category-photography tag-animals tag-doggy"></div>
-
-
-
-
-
-										<div class="singlecp bumpsm dark">
-											<a href="http://aonethemes.com/infinitygrid/a-puppy-post/">
-												<img
-												src="http://aonethemes.com/infinitygrid/wp-content/uploads/sites/10/2014/03/a_little_puppy_2-wallpaper-1600x900-710x399.jpg"
-												alt="" class="img-responsive opac" />
-											</a>
-										</div>
-
-
-										<div class="post-text-grip accent">
-											<a
-												href="http://aonethemes.com/infinitygrid/category/photography/"
-												title="View all posts in Photography" rel="category tag">Photography</a>
-										</div>
-
-										<h3 class="fully">
-											<a href="http://aonethemes.com/infinitygrid/a-puppy-post/">A
-												puppy post</a>
-										</h3>
-
-										<div class="post-text-grip topbtmbumpmin">
-											<p>
-												Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-												Aenean commodo ligula eget dolor. Aenean massa. Cum sociis
-												natoque penatibus et magnis dis <a class="read-more"
-													href="http://aonethemes.com/infinitygrid/a-puppy-post/">[...]</a>
-											</p>
-										</div>
-
-										<div class="post-text-grip linetop-pads">
-											<div class="infodiv accent pull-left bumpright">1 month
-												ago</div>
-
-											<div class="infodiv chatimg pull-right">0</div>
-
-
-											<div class="infodiv countimg pull-right">
-												<span class="heartcount">31</span>
-											</div>
-										</div>
-
-
-
-
-
-
-
-									</div>
-									<!--colored-->
-								</div>
-								<!--four col-->
-
-
-								<div class="col-md-4 bump" id="masonryme">
-									<div class="colored nopbump rel">
-										<div
-											class="post-173 post type-post status-publish format-gallery hentry category-photography category-post-formats"></div>
-
-
-
-
-
-
-
-
-										<div class="singlecp bumpsm dark">
-											<a
-												href="http://aonethemes.com/infinitygrid/my-favorite-model/">
-												<img
-												src="http://aonethemes.com/infinitygrid/wp-content/uploads/sites/10/2014/03/fashionist-710x710.jpg"
-												alt="" class="img-responsive opac" />
-											</a>
-										</div>
-
-
-										<div class="post-text-grip accent">
-											<a
-												href="http://aonethemes.com/infinitygrid/category/photography/"
-												title="View all posts in Photography" rel="category tag">Photography</a>,
-											<a
-												href="http://aonethemes.com/infinitygrid/category/post-formats/"
-												title="View all posts in Post formats" rel="category tag">Post
-												formats</a>
-										</div>
-
-										<h3 class="fully">
-											<a
-												href="http://aonethemes.com/infinitygrid/my-favorite-model/">My
-												favorite model</a>
-										</h3>
-
-										<div class="post-text-grip topbtmbumpmin">
-											<p>
-												Brick quiz whangs jumpy veldt fox. Bright vixens jump; dozy
-												fowl quack. Quick wafting zephyrs vex bold Jim. Quick
-												zephyrs blow, vexing <a class="read-more"
-													href="http://aonethemes.com/infinitygrid/my-favorite-model/">[...]</a>
-											</p>
-										</div>
-
-										<div class="post-text-grip linetop-pads">
-											<div class="infodiv accent pull-left bumpright">1 month
-												ago</div>
-
-											<div class="infodiv chatimg pull-right">0</div>
-
-
-											<div class="infodiv countimg pull-right">
-												<span class="heartcount">28</span>
-											</div>
-										</div>
-
-
-
-
-									</div>
-									<!--colored-->
-								</div>
-								<!--four col-->
-
-
-								<div class="col-md-4 bump" id="masonryme">
-									<div class="colored nopbump rel">
-										<div
-											class="post-171 post type-post status-publish format-image hentry category-photography tag-blonde tag-photos"></div>
-
-
-
-
-
-										<div class="singlecp bumpsm dark">
-											<a
-												href="http://aonethemes.com/infinitygrid/beautiful-blonde/">
-												<img
-												src="http://aonethemes.com/infinitygrid/wp-content/uploads/sites/10/2014/01/queencutiepie-710x437.jpg"
-												alt="" class="img-responsive opac" />
-											</a>
-										</div>
-
-
-										<div class="post-text-grip accent">
-											<a
-												href="http://aonethemes.com/infinitygrid/category/photography/"
-												title="View all posts in Photography" rel="category tag">Photography</a>
-										</div>
-
-										<h3 class="fully">
-											<a
-												href="http://aonethemes.com/infinitygrid/beautiful-blonde/">Beautiful
-												blondie</a>
-										</h3>
-
-										<div class="post-text-grip topbtmbumpmin">
-											<p>
-												Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id,
-												lorem. Maecenas nec odio et ante tincidunt tempus. Donec
-												vitae sapien ut libero <a class="read-more"
-													href="http://aonethemes.com/infinitygrid/beautiful-blonde/">[...]</a>
-											</p>
-										</div>
-
-										<div class="post-text-grip linetop-pads">
-											<div class="infodiv accent pull-left bumpright">1 month
-												ago</div>
-
-											<div class="infodiv chatimg pull-right">0</div>
-
-
-											<div class="infodiv countimg pull-right">
-												<span class="heartcount">24</span>
-											</div>
-										</div>
-
-
-
-
-
-
-
-									</div>
-									<!--colored-->
-								</div>
-								<!--four col-->
-
-
-								<div class="col-md-4 bump" id="masonryme">
-									<div class="colored nopbump rel">
-										<div
-											class="post-137 post type-post status-publish format-image hentry category-photography tag-models tag-photos"></div>
-
-
-
-
-
-										<div class="singlecp bumpsm dark">
-											<a
-												href="http://aonethemes.com/infinitygrid/cutest-umbrella-you-ever-seen/">
-												<img
-												src="http://aonethemes.com/infinitygrid/wp-content/uploads/sites/10/2014/02/girl_umbrella-wallpaper-1366x768-710x399.jpg"
-												alt="" class="img-responsive opac" />
-											</a>
-										</div>
-
-
-										<div class="post-text-grip accent">
-											<a
-												href="http://aonethemes.com/infinitygrid/category/photography/"
-												title="View all posts in Photography" rel="category tag">Photography</a>
-										</div>
-
-										<h3 class="fully">
-											<a
-												href="http://aonethemes.com/infinitygrid/cutest-umbrella-you-ever-seen/">The
-												cutest umbrella ever!</a>
-										</h3>
-
-										<div class="post-text-grip topbtmbumpmin">
-											<p>
-												He lay on his armour-like back, and if he lifted his head a
-												little he could see his brown belly, slightly domed <a
-													class="read-more"
-													href="http://aonethemes.com/infinitygrid/cutest-umbrella-you-ever-seen/">[...]</a>
-											</p>
-										</div>
-
-										<div class="post-text-grip linetop-pads">
-											<div class="infodiv accent pull-left bumpright">2
-												months ago</div>
-
-											<div class="infodiv chatimg pull-right">1</div>
-
-
-											<div class="infodiv countimg pull-right">
-												<span class="heartcount">83</span>
-											</div>
-										</div>
-
-
-
-
-
-
-
-									</div>
-									<!--colored-->
-								</div>
-								<!--four col-->
-
-
-								<div class="col-md-4 bump" id="masonryme">
-									<div class="colored nopbump rel">
-										<div
-											class="post-19 post type-post status-publish format-gallery hentry category-photography category-post-formats tag-blonde tag-gallery-format tag-models tag-photos"></div>
-
-
-
-
-
-
-
-
-										<div class="singlecp bumpsm dark">
-											<a href="http://aonethemes.com/infinitygrid/gallery-post/">
-												<img
-												src="http://aonethemes.com/infinitygrid/wp-content/uploads/sites/10/2014/01/gorgeousblond-710x1064.jpg"
-												alt="" class="img-responsive opac" />
-											</a>
-										</div>
-
-
-										<div class="post-text-grip accent">
-											<a
-												href="http://aonethemes.com/infinitygrid/category/photography/"
-												title="View all posts in Photography" rel="category tag">Photography</a>,
-											<a
-												href="http://aonethemes.com/infinitygrid/category/post-formats/"
-												title="View all posts in Post formats" rel="category tag">Post
-												formats</a>
-										</div>
-
-										<h3 class="fully">
-											<a href="http://aonethemes.com/infinitygrid/gallery-post/">Pretty
-												females gallery</a>
-										</h3>
-
-										<div class="post-text-grip topbtmbumpmin">
-											<p>
-												Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id,
-												lorem. Maecenas nec odio et ante tincidunt tempus. Donec
-												vitae sapien ut libero <a class="read-more"
-													href="http://aonethemes.com/infinitygrid/gallery-post/">[...]</a>
-											</p>
-										</div>
-
-										<div class="post-text-grip linetop-pads">
-											<div class="infodiv accent pull-left bumpright">3
-												months ago</div>
-
-											<div class="infodiv chatimg pull-right">0</div>
-
-
-											<div class="infodiv countimg pull-right">
-												<span class="heartcount">68</span>
-											</div>
-										</div>
-
-
-
-
-									</div>
-									<!--colored-->
-								</div>
-								<!--four col-->
-
-
-								<div class="col-md-4 bump" id="masonryme">
-									<div class="colored nopbump rel">
-										<div
-											class="post-74 post type-post status-publish format-aside hentry category-photography category-post-formats tag-photos tag-travel"></div>
-
-
-
-
-
-
-
-
-
-										<div class="singlecp dark">
-											<a
-												href="http://aonethemes.com/infinitygrid/live-strong-or-high/">
-												<img
-												src="http://aonethemes.com/infinitygrid/wp-content/uploads/sites/10/2014/01/dykeonbyke-710x489.jpg"
-												alt="" class="img-responsive opac" />
-											</a>
-										</div>
-
-
-									</div>
-									<!--colored-->
-								</div>
-								<!--four col-->
-
-
-								<div class="col-md-4 bump" id="masonryme">
+								<div class="col-md-4 bump" id="">
 									<div class="colored nopbump rel">
 										<div
 											class="post-77 post type-post status-publish format-quote hentry category-post-formats category-quotes tag-famous-quotes tag-quote"></div>
-
-
-
-
-
 
 										<div class="singlecp quotelight">
 											<a
@@ -398,16 +39,11 @@
 											</a>
 										</div>
 
-
-
-
-
 									</div>
 									<!--colored-->
 								</div>
 								<!--four col-->
-
-
+								
 								<div class="col-md-4 bump" id="masonryme">
 									<div class="colored nopbump rel">
 										<div
@@ -461,19 +97,10 @@
 												<span class="heartcount">42</span>
 											</div>
 										</div>
-
-
-
-
-
-
-
 									</div>
 									<!--colored-->
 								</div>
 								<!--four col-->
-
-
 								<div class="col-md-4 bump" id="masonryme">
 									<div class="colored nopbump rel">
 										<div
@@ -540,70 +167,7 @@
 								<!--four col-->
 
 
-								<div class="col-md-4 bump" id="masonryme">
-									<div class="colored nopbump rel">
-										<div
-											class="post-61 post type-post status-publish format-image hentry category-photography category-travel tag-photos tag-travel"></div>
 
-
-
-
-
-										<div class="singlecp bumpsm dark">
-											<a
-												href="http://aonethemes.com/infinitygrid/biking-in-san-francisco/">
-												<img
-												src="http://aonethemes.com/infinitygrid/wp-content/uploads/sites/10/2014/01/biking_in_san_francisco-wallpaper-1920x1080-710x399.jpg"
-												alt="" class="img-responsive opac" />
-											</a>
-										</div>
-
-
-										<div class="post-text-grip accent">
-											<a
-												href="http://aonethemes.com/infinitygrid/category/photography/"
-												title="View all posts in Photography" rel="category tag">Photography</a>,
-											<a href="http://aonethemes.com/infinitygrid/category/travel/"
-												title="View all posts in Travel" rel="category tag">Travel</a>
-										</div>
-
-										<h3 class="fully">
-											<a
-												href="http://aonethemes.com/infinitygrid/biking-in-san-francisco/">Biking
-												in San Francisco</a>
-										</h3>
-
-										<div class="post-text-grip topbtmbumpmin">
-											<p>
-												The European languages are members of the same family. Their
-												separate existence is a myth. For science, music, sport,
-												etc, Europe uses <a class="read-more"
-													href="http://aonethemes.com/infinitygrid/biking-in-san-francisco/">[...]</a>
-											</p>
-										</div>
-
-										<div class="post-text-grip linetop-pads">
-											<div class="infodiv accent pull-left bumpright">3
-												months ago</div>
-
-											<div class="infodiv chatimg pull-right">0</div>
-
-
-											<div class="infodiv countimg pull-right">
-												<span class="heartcount">18</span>
-											</div>
-										</div>
-
-
-
-
-
-
-
-									</div>
-									<!--colored-->
-								</div>
-								<!--four col-->
 
 
 								<div class="col-md-4 bump" id="masonryme">
@@ -700,7 +264,7 @@
 
 							</div>
 							<!--end masonry grid-->
-							<div class="col-md-4 col-md-offset-4">
+							<!-- <div class="col-md-4 col-md-offset-4">
 								<div class="pagination-load-more">
 									<div class="pagination-me centertext">
 										<a href="http://aonethemes.com/infinitygrid/page/2/">Load
@@ -709,7 +273,7 @@
 
 									<span class="pagination-span-load"></span>
 								</div>
-							</div>
+							</div> -->
 							<!--span12-->
 
 
@@ -729,6 +293,6 @@
 		<!--margin-->
 	</div>
 	<!--end entiresite wrap-->
-<jsp:include page="/WEB-INF/jsp/cmn/inc/footerResource.jsp" />
+	<jsp:include page="/WEB-INF/jsp/cmn/inc/footerResource.jsp" />
 </body>
 </html>
