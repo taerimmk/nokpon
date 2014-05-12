@@ -21,8 +21,8 @@ import javax.persistence.Query;
 
 import org.springframework.stereotype.Repository;
 
-import com.june.app.user.model.RoleInfo;
 import com.june.app.user.model.UserInfo;
+import com.june.app.user.model.UserRoleInfo;
 import com.june.app.user.repository.UserRepository;
 
 /**
@@ -70,9 +70,9 @@ public class JpaUserRepositoryImpl implements UserRepository {
     	return userInfo;
     }
     @Override
-    public RoleInfo registerRole(RoleInfo roleInfo){
-    	this.em.persist(roleInfo);
-    	return roleInfo;
+    public UserRoleInfo registerRole(UserRoleInfo vo){
+    	this.em.persist(vo);
+    	return vo;
     }
     
 

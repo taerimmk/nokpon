@@ -2,7 +2,6 @@ package com.june.app.user.service.impl;
 
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.Set;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -37,15 +36,21 @@ public class AuthServiceImpl implements IAuthService, UserDetailsService {
 	@Override
 	public UserDetails loadUserByUsername(String userId)
 			throws UsernameNotFoundException {
-		logger.debug("====================userId==================={}",userId);
+
 		UserInfo userInfos = userRepository.getUser(userId);
 		Collection<SimpleGrantedAuthority> authorities = new ArrayList<SimpleGrantedAuthority>();
-		Set<RoleInfo> roleInfos = userInfos.getRoleInfos();
+		/*Set<RoleInfo> roleInfos = userInfos.getRoleInfos();
 		for (RoleInfo roleInfo :roleInfos){
 			SimpleGrantedAuthority userAuthority = new SimpleGrantedAuthority(roleInfo.getRole());
 			authorities.add(userAuthority);
-		}
+		}*/
+		
+		/**유저 권한 1:1 매핑으로 수정*/
+		RoleInfo roleInfo = userInfos.getUserRoleInfo().getRoleInfo();
+		SimpleGrantedAuthority userAuthority = new SimpleGrantedAuthority(roleInfo.getRole());
+		authorities.add(userAuthority);
 	
+		
 		
 		/*SimpleGrantedAuthority userAuthority = new SimpleGrantedAuthority(details.getRole());*/
 		/*SimpleGrantedAuthority adminAuthority = new SimpleGrantedAuthority(

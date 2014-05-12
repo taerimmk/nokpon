@@ -34,6 +34,7 @@ import org.springframework.dao.DataAccessException;
 
 import com.june.app.user.model.RoleInfo;
 import com.june.app.user.model.UserInfo;
+import com.june.app.user.model.UserRoleInfo;
 
 /**
  * Repository class for <code>Owner</code> domain objects All method names are compliant with Spring Data naming
@@ -55,8 +56,7 @@ public interface UserRepository {
     
     UserInfo registerUser(UserInfo userInfo) throws DataAccessException;
     
-    RoleInfo registerRole(RoleInfo roleInfo) throws DataAccessException;
-    
+    UserRoleInfo registerRole(UserRoleInfo vo) throws DataAccessException;
 
 
 }

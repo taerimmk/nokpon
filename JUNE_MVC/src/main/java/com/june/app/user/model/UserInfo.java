@@ -1,38 +1,19 @@
-/*
- * Copyright 2002-2013 the original author or authors.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
+
 package com.june.app.user.model;
 
-import java.util.Set;
-
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
-import javax.persistence.Transient;
 import javax.validation.constraints.Pattern;
 
-import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotEmpty;
 
-import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.june.app.cmn.model.Pagination;
 
 
 /**
@@ -43,7 +24,7 @@ import com.fasterxml.jackson.annotation.JsonManagedReference;
 @Entity
 //@JsonSerialize
 @Table(name = "NOK_USER")
-public class UserInfo {
+public class UserInfo extends Pagination {
 
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -60,8 +41,6 @@ public class UserInfo {
 	protected String name;
 	
 	@Column(name = "email")
-	@NotEmpty
-	@Email
 	protected String email;
 	
 	@Column(name = "status")
@@ -69,16 +48,16 @@ public class UserInfo {
 	
 	
 	@Column(name = "password")
-	@NotEmpty
-	//@Pattern(regexp ="^(?=.*[a-zA-Z])(?=.*[!@#$%^*+=-])(?=.*[0-9]).{6,20}$")
 	private String password;
 	
-	@OneToMany(cascade = CascadeType.ALL, mappedBy = "userInfo" ,fetch=FetchType.EAGER )
-    private Set<RoleInfo> roleInfos;
+	/*@OneToOne
+	@JoinColumn(name="seq")
+    private UserRoleInfo userRoleInfo;*/
 	
-	@Transient
-	private String passwordCert;
-	
+	@OneToOne(optional = true)
+	@JoinColumn(name = "seq", referencedColumnName = "user",insertable = false, updatable = false)
+	private UserRoleInfo userRoleInfo;
+
 	public Integer getSeq() {
 		return seq;
 	}
@@ -127,30 +106,22 @@ public class UserInfo {
 		this.password = password;
 	}
 
-	@JsonManagedReference
-	public Set<RoleInfo> getRoleInfos() {
-		return roleInfos;
+	public UserRoleInfo getUserRoleInfo() {
+		return userRoleInfo;
 	}
 
-	public void setRoleInfos(Set<RoleInfo> roleInfos) {
-		this.roleInfos = roleInfos;
-	}
-
-	public String getPasswordCert() {
-		return passwordCert;
-	}
-
-	public void setPasswordCert(String passwordCert) {
-		this.passwordCert = passwordCert;
+	public void setUserRoleInfo(UserRoleInfo userRoleInfo) {
+		this.userRoleInfo = userRoleInfo;
 	}
 
 	@Override
 	public String toString() {
 		return "UserInfo [seq=" + seq + ", userId=" + userId + ", name=" + name
 				+ ", email=" + email + ", status=" + status + ", password="
-				+ password + ", roleInfos=" + roleInfos + ", passwordCert="
-				+ passwordCert + "]";
-	}
-
+				+ password + ", userRoleInfo=" + userRoleInfo + "]";
+	}	
+	
+	
+	
 
 }

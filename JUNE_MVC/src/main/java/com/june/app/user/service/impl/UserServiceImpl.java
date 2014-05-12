@@ -26,6 +26,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.june.app.user.model.RoleInfo;
 import com.june.app.user.model.UserInfo;
+import com.june.app.user.model.UserRoleInfo;
 import com.june.app.user.repository.UserRepository;
 import com.june.app.user.service.UserService;
 
@@ -68,11 +69,13 @@ public class UserServiceImpl implements UserService {
 		String hashedPassword = passwordEncoder.encode(userPass);
 		userInfo.setPassword(hashedPassword);
 		UserInfo userInfoResult = userRepository.registerUser(userInfo);
-		RoleInfo roleInfo = new RoleInfo();
-		roleInfo.setRole("ROLE_USER");
-		roleInfo.setUserInfo(userInfoResult);
-		roleInfo.setRegiDate(new Date());
-		userRepository.registerRole(roleInfo);
+		
+		
+		UserRoleInfo userRoleInfo = new UserRoleInfo();
+		userRoleInfo.setRole(2);
+		userRoleInfo.setUser(userInfoResult.getSeq());
+		userRoleInfo.setRegiDate(new Date());
+		userRepository.registerRole(userRoleInfo);
 		return userInfoResult;
 
 	}
