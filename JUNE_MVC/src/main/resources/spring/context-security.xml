@@ -13,11 +13,13 @@
 		<intercept-url pattern="/**" access="ROLE_USER" />
 		<!-- <intercept-url pattern="/*" access="ROLE_ADMIN" /> -->
 		<form-login login-page="/login" default-target-url="/main"
-			authentication-failure-url="/accessdenied" authentication-success-handler-ref="loginSuccessHandler" />
+			authentication-failure-url="/accessdenied"/> 
+			 
+			
 		<logout logout-success-url="/login" />
 		
 	</http>
-
+<!-- authentication-success-handler-ref="loginSuccessHandler" -->
 	<!-- <authentication-manager>
 		<authentication-provider user-service-ref="authService">
 		</authentication-provider>
@@ -33,6 +35,6 @@
 	</authentication-manager>
 	
 	<!-- 로그인 성공시 핸들러 -->
-	<beans:bean id="loginSuccessHandler" class="com.june.app.user.service.LoginSucssesService" />
+	<!-- <beans:bean id="loginSuccessHandler" class="com.june.app.user.service.LoginSucssesService" /> -->
 	
 </beans:beans>
