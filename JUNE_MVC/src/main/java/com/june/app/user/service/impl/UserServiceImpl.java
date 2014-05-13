@@ -24,7 +24,6 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.june.app.user.model.RoleInfo;
 import com.june.app.user.model.UserInfo;
 import com.june.app.user.model.UserRoleInfo;
 import com.june.app.user.repository.UserRepository;
@@ -47,11 +46,6 @@ public class UserServiceImpl implements UserService {
 		this.userRepository = userRepository;
 	}
 
-	@Override
-	@Transactional(readOnly = true)
-	public UserInfo selectUser(int seq) throws DataAccessException {
-		return userRepository.selectUser(seq);
-	}
 
 	@Override
 	@Transactional(readOnly = true)
@@ -80,17 +74,4 @@ public class UserServiceImpl implements UserService {
 
 	}
 
-	/*
-	 * @SuppressWarnings("deprecation")
-	 * 
-	 * @Override public UserDetails loadUserByUsername(String username) throws
-	 * UsernameNotFoundException, DataAccessException {
-	 * System.out.println("Getting access details from employee dao !!");
-	 * 
-	 * // Ideally it should be fetched from database and populated instance of
-	 * // #org.springframework.security.core.userdetails.User should be returned
-	 * from this method //UserDetails user = new User(username, "password",
-	 * true, true, true, true, new GrantedAuthority[]{ new
-	 * GrantedAuthorityImpl("ROLE_USER") }); return user; }
-	 */
 }

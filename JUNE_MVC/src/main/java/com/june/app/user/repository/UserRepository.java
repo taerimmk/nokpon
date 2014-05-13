@@ -32,7 +32,6 @@ package com.june.app.user.repository;
 
 import org.springframework.dao.DataAccessException;
 
-import com.june.app.user.model.RoleInfo;
 import com.june.app.user.model.UserInfo;
 import com.june.app.user.model.UserRoleInfo;
 
@@ -48,8 +47,7 @@ import com.june.app.user.model.UserRoleInfo;
 public interface UserRepository {
 
     
-    UserInfo selectUser(int seq) throws DataAccessException;
-    
+        
     Long selectUserId(String userId) throws DataAccessException;
 
     UserInfo getUser(String username) throws DataAccessException;

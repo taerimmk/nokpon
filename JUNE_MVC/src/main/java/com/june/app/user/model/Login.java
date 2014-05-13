@@ -13,23 +13,38 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.june.app.user.service;
-
-import org.springframework.dao.DataAccessException;
-
-import com.june.app.user.model.UserInfo;
-
+package com.june.app.user.model;
 
 /**
- * Mostly used as a facade for all Petclinic controllers
- *
- * @author Michael Isvy
+ * Simple JavaBean domain object representing an person.
+ * 
+ * @author Ken Krebs
  */
-public interface UserService {
+public class Login {
 
-   
-	
-    public Long selectUserId(String userId) throws DataAccessException;
-    public UserInfo registerUser(UserInfo userInfo) throws DataAccessException;
-   
+	boolean isLogin = false;
+
+	UserInfo userInfo;
+
+	public boolean isLogin() {
+		return isLogin;
+	}
+
+	public void setLogin(boolean isLogin) {
+		this.isLogin = isLogin;
+	}
+
+	public UserInfo getUserInfo() {
+		return userInfo;
+	}
+
+	public void setUserInfo(UserInfo userInfo) {
+		this.userInfo = userInfo;
+	}
+
+	@Override
+	public String toString() {
+		return "Login [isLogin=" + isLogin + ", userInfo=" + userInfo + "]";
+	}
+
 }

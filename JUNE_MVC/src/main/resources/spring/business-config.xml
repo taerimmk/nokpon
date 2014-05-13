@@ -82,5 +82,9 @@
 	
 	<!-- Defined in employee-servlet.xml -->
 	<bean id="authService" class="com.june.app.user.service.impl.AuthServiceImpl" />
+	<bean id="loginSuccessHandler" class="com.june.app.user.service.impl.LoginSuccessHandlerImpl">
+		<property name="alwaysUseDefaultTargetUrl" value="false" />
+		<property name="defaultTargetUrl" value="/main" />
+	</bean>
 
 </beans>

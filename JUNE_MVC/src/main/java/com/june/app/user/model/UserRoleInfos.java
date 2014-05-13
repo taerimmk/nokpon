@@ -13,37 +13,34 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.june.app.board.model;
+package com.june.app.user.model;
 
-import javax.persistence.MappedSuperclass;
-import javax.persistence.Transient;
+import java.util.List;
+
 
 /**
- * Simple JavaBean domain object with an id property. Used as a base class for objects needing this property.
- *
+ * Simple JavaBean domain object representing an person.
+ * 
  * @author Ken Krebs
- * @author Juergen Hoeller
  */
-@MappedSuperclass
-public class PageEntity {
+
+public class UserRoleInfos {
+
+	List<UserRoleInfo> userRoleInfos;
+
+	public List<UserRoleInfo> getUserRoleInfos() {
+		return userRoleInfos;
+	}
+
+	public void setUserRoleInfos(List<UserRoleInfo> userRoleInfos) {
+		this.userRoleInfos = userRoleInfos;
+	}
+
+	@Override
+	public String toString() {
+		return "UserRoleInfos [userRoleInfos=" + userRoleInfos + "]";
+	}
 	
-	@Transient
-	private int pageSize = 10;
-	@Transient
-	private int pageNumber = 1;
-	
-	public int getPageSize() {
-		return pageSize;
-	}
-	public void setPageSize(int pageSize) {
-		this.pageSize = pageSize;
-	}
-	public int getPageNumber() {
-		return pageNumber;
-	}
-	public void setPageNumber(int pageNumber) {
-		this.pageNumber = pageNumber;
-	}
 	
 	
 }

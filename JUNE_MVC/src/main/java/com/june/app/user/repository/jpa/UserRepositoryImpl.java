@@ -35,19 +35,13 @@ import com.june.app.user.repository.UserRepository;
  * @since 22.4.2006
  */
 @Repository
-public class JpaUserRepositoryImpl implements UserRepository {
+public class UserRepositoryImpl implements UserRepository {
 
     @PersistenceContext
     private EntityManager em;
 
 
-    @Override
-    public UserInfo selectUser(int seq) {
-        Query query = this.em.createQuery("SELECT userInfo FROM UserInfo userInfo WHERE userInfo.seq =:seq");
-        query.setParameter("seq", seq);
-        return (UserInfo) query.getSingleResult();
-    }
-
+  
     @Override
     public Long selectUserId(String userId) {
     	Query query = this.em.createQuery("SELECT count(userInfo) FROM UserInfo userInfo WHERE userInfo.userId =:userId");
@@ -58,7 +52,7 @@ public class JpaUserRepositoryImpl implements UserRepository {
     @Override
 	public UserInfo getUser(String userId) {
 		
-		Query query = this.em.createQuery("SELECT userInfo FROM UserInfo userInfo left join fetch userInfo.roleInfos WHERE userInfo.userId =:userId");
+		Query query = this.em.createQuery("SELECT userInfo FROM UserInfo userInfo WHERE userInfo.userId =:userId");
 		query.setParameter("userId", userId);
 		
 		return (UserInfo) query.getSingleResult();

@@ -4,38 +4,37 @@
 	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
 	http://www.springframework.org/schema/security
 	http://www.springframework.org/schema/security/spring-security.xsd">
-	
+
 	<http pattern="/login" security="none" />
 	<http pattern="/register/**" security="none" />
 	<http pattern="/resources/**" security="none" />
-	<http pattern="/main/**" security="none" />
+	<!-- <http pattern="/main/**" security="none" /> -->
 	<http pattern="/site/**" security="none" />
-	
+
 	<http>
 		<intercept-url pattern="/circle/**" access="ROLE_NOKPON" />
+		<intercept-url pattern="/**" access="IS_AUTHENTICATED_ANONYMOUSLY" />
 		<!-- <intercept-url pattern="/*" access="ROLE_ADMIN" /> -->
 		<form-login login-page="/login" default-target-url="/main"
-			authentication-failure-url="/accessdenied"/> 
-			
-		<logout logout-success-url="/login" />
-		
+			authentication-failure-url="/accessdenied" always-use-default-target="false"
+			authentication-success-handler-ref="loginSuccessHandler" />
+
+		<logout logout-success-url="/login" invalidate-session="true"
+			delete-cookies="JSESSIONID" />
+		<session-management session-fixation-protection="newSession">
+			<concurrency-control max-sessions="1"
+				expired-url="/login" />
+		</session-management>
+
 	</http>
-<!-- authentication-success-handler-ref="loginSuccessHandler" -->
-	<!-- <authentication-manager>
-		<authentication-provider user-service-ref="authService">
-		</authentication-provider>
-	</authentication-manager> -->
 
 	<beans:bean name="bcryptEncoder"
-    class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder"/>
-    
-	<authentication-manager>
+		class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder" />
+
+	<authentication-manager alias="authenticationManager">
 		<authentication-provider user-service-ref="authService">
 			<password-encoder ref="bcryptEncoder" />
 		</authentication-provider>
 	</authentication-manager>
-	
-	<!-- 로그인 성공시 핸들러 -->
-	<!-- <beans:bean id="loginSuccessHandler" class="com.june.app.user.service.LoginSucssesService" /> -->
-	
+
 </beans:beans>

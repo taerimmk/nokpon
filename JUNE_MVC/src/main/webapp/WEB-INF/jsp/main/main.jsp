@@ -43,16 +43,61 @@
 									<!--colored-->
 								</div>
 								<!--four col-->
-								
-								<div class="col-md-4 bump" id="masonryme">
+								<div class="col-md-4 bump" id="">
+									<div class="colored nopbump rel">
+										<div
+											class="post-31 post type-post status-publish format-video hentry category-post-formats category-video-clips tag-video-format tag-vimeo"></div>
+
+										<div class="fit-vids bumpsm">
+										<!-- <div class="singlecp bumpsm dark"> -->
+											<!-- <iframe
+												src="//player.vimeo.com/video/32655795?title=0&amp;byline=0&amp;portrait=0"
+												width="1100" height="619" frameborder="0"
+												webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> -->
+											${video.nttLink }	
+										</div>
+
+										<div class="post-text-grip accent">
+											<!-- <a
+												href="http://aonethemes.com/infinitygrid/category/post-formats/"
+												title="View all posts in Post formats" rel="category tag">Post
+												formats</a>, <a
+												href="http://aonethemes.com/infinitygrid/category/video-clips/"
+												title="View all posts in Video clips" rel="category tag">Video
+												clips</a> -->
+										</div>
+
+										<h3 class="fully">
+											<a
+												href="<c:url value="/site/video/get/${video.nttId}/1"/>" >${video.nttSj}</a>
+										</h3>
+
+										<div class="post-text-grip topbtmbumpmin">
+											<p>
+												${video.nttCn}<a
+													class="read-more"
+													href="http://aonethemes.com/infinitygrid/vimeo-video-post/">[...]</a>
+											</p>
+										</div>
+
+										<div class="post-text-grip linetop-pads">
+											<div class="infodiv accent pull-left bumpright">3
+												months ago</div>
+
+											<div class="infodiv chatimg pull-right">0</div>
+
+
+											<div class="infodiv countimg pull-right">
+												<span class="heartcount">5</span>
+											</div>
+										</div>
+									</div>
+									<!--colored-->
+								</div>
+								<div class="col-md-4 bump" id="">
 									<div class="colored nopbump rel">
 										<div
 											class="post-64 post type-post status-publish format-image hentry category-audio category-photography tag-photos"></div>
-
-
-
-
-
 										<div class="singlecp bumpsm dark">
 											<a
 												href="http://aonethemes.com/infinitygrid/too-many-hours-of-gaming/">
@@ -61,8 +106,6 @@
 												alt="" class="img-responsive opac" />
 											</a>
 										</div>
-
-
 										<div class="post-text-grip accent">
 											<a href="http://aonethemes.com/infinitygrid/category/audio/"
 												title="View all posts in Audio" rel="category tag">Audio</a>,
@@ -101,87 +144,12 @@
 									<!--colored-->
 								</div>
 								<!--four col-->
-								<div class="col-md-4 bump" id="masonryme">
-									<div class="colored nopbump rel">
-										<div
-											class="post-31 post type-post status-publish format-video hentry category-post-formats category-video-clips tag-video-format tag-vimeo"></div>
-
-
-
-										<div class="fit-vids bumpsm">
-											<iframe
-												src="//player.vimeo.com/video/32655795?title=0&amp;byline=0&amp;portrait=0"
-												width="1100" height="619" frameborder="0"
-												webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-										</div>
-
-										<div class="post-text-grip accent">
-											<a
-												href="http://aonethemes.com/infinitygrid/category/post-formats/"
-												title="View all posts in Post formats" rel="category tag">Post
-												formats</a>, <a
-												href="http://aonethemes.com/infinitygrid/category/video-clips/"
-												title="View all posts in Video clips" rel="category tag">Video
-												clips</a>
-										</div>
-
-										<h3 class="fully">
-											<a
-												href="http://aonethemes.com/infinitygrid/vimeo-video-post/">Vimeo
-												video post</a>
-										</h3>
-
-										<div class="post-text-grip topbtmbumpmin">
-											<p>
-												&#8216;We had the best of educations—in fact, we went to
-												school every day—&#8217; &#8216;I&#8217;VE been to a
-												day-school, too,&#8217; said Alice; &#8216;you <a
-													class="read-more"
-													href="http://aonethemes.com/infinitygrid/vimeo-video-post/">[...]</a>
-											</p>
-										</div>
-
-										<div class="post-text-grip linetop-pads">
-											<div class="infodiv accent pull-left bumpright">3
-												months ago</div>
-
-											<div class="infodiv chatimg pull-right">0</div>
-
-
-											<div class="infodiv countimg pull-right">
-												<span class="heartcount">5</span>
-											</div>
-										</div>
-
-
-
-
-
-
-
-
-
-									</div>
-									<!--colored-->
-								</div>
+								
 								<!--four col-->
-
-
-
-
-
 								<div class="col-md-4 bump" id="masonryme">
 									<div class="colored nopbump rel">
 										<div
 											class="post-52 post type-post status-publish format-gallery hentry category-photography category-post-formats tag-blonde tag-models tag-photos"></div>
-
-
-
-
-
-
-
-
 										<div class="singlecp bumpsm dark">
 											<a
 												href="http://aonethemes.com/infinitygrid/beautiful-girls-slideshow/">

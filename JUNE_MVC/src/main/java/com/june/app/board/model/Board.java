@@ -1,18 +1,4 @@
-/*
- * Copyright 2002-2013 the original author or authors.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
+
 package com.june.app.board.model;
 
 import java.util.Date;
@@ -43,7 +29,7 @@ public class Board extends Pagination {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "NTT_ID")
-	private long nttId;
+	private Integer nttId;
 
 	@Column(name = "BBS_ID")
 	@NotNull
@@ -81,26 +67,28 @@ public class Board extends Pagination {
 	@Column(name = "ATCH_FILE_ID")
 	private String atchFileId;
 
-	@Column(name = "FRST_REGIST_PNTTM")
-	private Date frstRegistPnttm;
+	@Column(name = "REGI_DATE", updatable=false)
+	private Date regiDate;
 
-	@Column(name = "FRST_REGISTER_ID")
-	private String frstRegisterId;
+	@Column(name = "REGI_ID", updatable=false)
+	private Integer regiId;
 
-	@Column(name = "LAST_UPDT_PNTTM")
-	private Date lastUpdtPnttm;
+	@Column(name = "UPDT_DATE")
+	private Date updtDate;
 
-	@Column(name = "LAST_UPDUSR_ID")
-	private String lastUpdusrId;
+	@Column(name = "UPDT_ID")
+	private String updtId;
 	
 	@Transient
 	private MultipartFile atchFileIdFile;
 
-	public long getNttId() {
+	
+
+	public Integer getNttId() {
 		return nttId;
 	}
 
-	public void setNttId(long nttId) {
+	public void setNttId(Integer nttId) {
 		this.nttId = nttId;
 	}
 
@@ -192,36 +180,36 @@ public class Board extends Pagination {
 		this.atchFileId = atchFileId;
 	}
 
-	public Date getFrstRegistPnttm() {
-		return frstRegistPnttm;
+	public Date getRegiDate() {
+		return regiDate;
 	}
 
-	public void setFrstRegistPnttm(Date frstRegistPnttm) {
-		this.frstRegistPnttm = frstRegistPnttm;
+	public void setRegiDate(Date regiDate) {
+		this.regiDate = regiDate;
 	}
 
-	public String getFrstRegisterId() {
-		return frstRegisterId;
+	public Integer getRegiId() {
+		return regiId;
 	}
 
-	public void setFrstRegisterId(String frstRegisterId) {
-		this.frstRegisterId = frstRegisterId;
+	public void setRegiId(Integer regiId) {
+		this.regiId = regiId;
 	}
 
-	public Date getLastUpdtPnttm() {
-		return lastUpdtPnttm;
+	public Date getUpdtDate() {
+		return updtDate;
 	}
 
-	public void setLastUpdtPnttm(Date lastUpdtPnttm) {
-		this.lastUpdtPnttm = lastUpdtPnttm;
+	public void setUpdtDate(Date updtDate) {
+		this.updtDate = updtDate;
 	}
 
-	public String getLastUpdusrId() {
-		return lastUpdusrId;
+	public String getUpdtId() {
+		return updtId;
 	}
 
-	public void setLastUpdusrId(String lastUpdusrId) {
-		this.lastUpdusrId = lastUpdusrId;
+	public void setUpdtId(String updtId) {
+		this.updtId = updtId;
 	}
 
 	public MultipartFile getAtchFileIdFile() {
@@ -239,14 +227,10 @@ public class Board extends Pagination {
 				+ ", answerYn=" + answerYn + ", parntscttNo=" + parntscttNo
 				+ ", answerLc=" + answerLc + ", sortOrdr=" + sortOrdr
 				+ ", rdcnt=" + rdcnt + ", useYn=" + useYn + ", atchFileId="
-				+ atchFileId + ", frstRegistPnttm=" + frstRegistPnttm
-				+ ", frstRegisterId=" + frstRegisterId + ", lastUpdtPnttm="
-				+ lastUpdtPnttm + ", lastUpdusrId=" + lastUpdusrId
+				+ atchFileId + ", regiDate=" + regiDate + ", regiId=" + regiId
+				+ ", updtDate=" + updtDate + ", updtId=" + updtId
 				+ ", atchFileIdFile=" + atchFileIdFile + "]";
 	}
 
 	
-	
-	
-
 }

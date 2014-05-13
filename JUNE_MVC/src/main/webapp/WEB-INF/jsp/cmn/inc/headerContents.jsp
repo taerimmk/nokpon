@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
 	pageEncoding="utf-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://www.springframework.org/security/tags" prefix="sec" %>
+
 <header class="header-wrap">
 	
 	<div class="container">
@@ -73,10 +75,18 @@
 							<li
 								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-101"><a
 								href="http://aonethemes.com/infinitygrid/shortcodes-all-built-into-your-kitchen-sink/">Shortcodes</a></li>
+<%-- <sec:authorize access="isAuthenticated()" >			 --%>
+<sec:authentication var="principal" property="principal" />						
 							<li
 								class="menu-item menu-item-type-custom menu-item-object-custom menu-item-103"><a
-								href="#" id="login">Log In</a>
+								href="<c:url value="/login" />" id="login">Log In <%-- ${principal.username} --%>
+								<c:if test="${ not empty principal && 'anonymousUser' ne principal}">
+								${principal.username }
+								<%-- ${principal.username} --%>
+								</c:if>
+								</a>
 								</li>
+<%-- </sec:authorize> --%>								
 						</ul>
 					</div>
 				</nav>
@@ -93,9 +103,9 @@
 <!-- end of menu and logo section -->
 <script type='text/javascript'>
 $(function(){
-	$("#login").on("click", function(){
+	/* $("#login").on("click", function(){
 		return false;
-	});
+	}); */
 });
 </script>
 
