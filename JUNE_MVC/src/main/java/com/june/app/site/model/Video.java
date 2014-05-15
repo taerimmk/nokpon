@@ -9,10 +9,12 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 import org.hibernate.validator.constraints.NotEmpty;
 
+import com.june.app.cmn.model.Like;
 import com.june.app.cmn.model.Pagination;
 import com.june.app.user.model.UserInfo;
 
@@ -66,9 +68,16 @@ public class Video extends Pagination {
 	private Integer updtId;
 	
 	
+	@Column(name = "LIKE_ID")
+	private Integer likeId;
+	
 	@ManyToOne()
     @JoinColumn(name = "REGI_ID", insertable=false,updatable=false)
     private UserInfo user;
+	
+	@OneToOne()
+    @JoinColumn(name = "LIKE_ID", insertable=false,updatable=false)
+    private Like like;
 
 
 	public Integer getNttId() {

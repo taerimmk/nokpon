@@ -26,6 +26,7 @@ import javax.persistence.Table;
 
 import org.hibernate.validator.constraints.NotEmpty;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.june.app.cmn.model.Pagination;
 
 
@@ -73,7 +74,7 @@ public class UserInfo extends Pagination {
 	public Integer getSeq() {
 		return seq;
 	}
-
+	@JsonIgnore
 	public void setSeq(Integer seq) {
 		this.seq = seq;
 	}
@@ -97,7 +98,8 @@ public class UserInfo extends Pagination {
 	public String getEmail() {
 		return email;
 	}
-
+	
+	@JsonIgnore
 	public void setEmail(String email) {
 		this.email = email;
 	}
@@ -109,7 +111,8 @@ public class UserInfo extends Pagination {
 	public void setStatus(String status) {
 		this.status = status;
 	}
-
+	
+	@JsonIgnore
 	public String getPassword() {
 		return password;
 	}
@@ -117,7 +120,7 @@ public class UserInfo extends Pagination {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-
+	@JsonIgnore
 	public UserRoleInfo getUserRoleInfo() {
 		return userRoleInfo;
 	}

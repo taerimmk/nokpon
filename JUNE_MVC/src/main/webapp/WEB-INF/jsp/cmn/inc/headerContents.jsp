@@ -1,14 +1,15 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
 	pageEncoding="utf-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@ taglib uri="http://www.springframework.org/security/tags" prefix="sec" %>
+<%@ taglib uri="http://www.springframework.org/security/tags"
+	prefix="sec"%>
 
 <header class="header-wrap">
-	
+
 	<div class="container">
-		
+
 		<div class="row">
-		
+
 			<div class="col-md-3">
 
 				<div class="logo">
@@ -50,6 +51,26 @@
 											width</a></li>
 								</ul></li> -->
 							<li
+								class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-165"><a
+								href="http://#">Demo pages</a>
+								<ul class="sub-menu" style="display: none; visibility: hidden;">
+									<li
+										class="menu-item menu-item-type-custom menu-item-object-custom menu-item-104"><a
+										href="http://aonethemes.com/infinitygrid/5/">Comments</a></li>
+									<li
+										class="menu-item menu-item-type-post_type menu-item-object-page menu-item-168"><a
+										href="http://aonethemes.com/infinitygrid/single-page-right-sidebar/">Right
+											sidebar</a></li>
+									<li
+										class="menu-item menu-item-type-post_type menu-item-object-page menu-item-167"><a
+										href="http://aonethemes.com/infinitygrid/single-page-left-sidebar/">Left
+											sidebar</a></li>
+									<li
+										class="menu-item menu-item-type-post_type menu-item-object-page menu-item-166"><a
+										href="http://aonethemes.com/infinitygrid/single-page-full-width/">Full
+											width</a></li>
+								</ul></li>
+							<li
 								class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-38"><a
 								href="http://#">Circle</a>
 								<ul class="sub-menu">
@@ -75,18 +96,30 @@
 							<li
 								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-101"><a
 								href="http://aonethemes.com/infinitygrid/shortcodes-all-built-into-your-kitchen-sink/">Shortcodes</a></li>
-<%-- <sec:authorize access="isAuthenticated()" >			 --%>
-<sec:authentication var="principal" property="principal" />						
+							<c:set value="${sessionScope.loginInfo}" var="loginInfo" />
+							<c:if test="${loginInfo == null}">
+								<li
+									class="menu-item menu-item-type-custom menu-item-object-custom menu-item-103"><a
+									href="<c:url value="/login" />" id="login">Log In</a></li>
+							</c:if>
+							<c:if test="${loginInfo != null && loginInfo.login}">
+								<li
+									class="menu-item menu-item-type-custom menu-item-object-custom menu-item-103"><a
+									href="<c:url value="/j_spring_security_logout"/>" id="login">Log
+										Out : ${loginInfo.userInfo.name}</a></li>
+							</c:if>
+							<%-- <sec:authorize access="isAuthenticated()" >			 --%>
+							<%-- <sec:authentication var="principal" property="principal" />						
 							<li
 								class="menu-item menu-item-type-custom menu-item-object-custom menu-item-103"><a
-								href="<c:url value="/login" />" id="login">Log In <%-- ${principal.username} --%>
+								href="<c:url value="/login" />" id="login">Log In ${principal.username}
 								<c:if test="${ not empty principal && 'anonymousUser' ne principal}">
 								${principal.username }
-								<%-- ${principal.username} --%>
+								${principal.username}
 								</c:if>
 								</a>
-								</li>
-<%-- </sec:authorize> --%>								
+								</li> --%>
+							<%-- </sec:authorize> --%>
 						</ul>
 					</div>
 				</nav>
@@ -102,10 +135,10 @@
 </header>
 <!-- end of menu and logo section -->
 <script type='text/javascript'>
-$(function(){
-	/* $("#login").on("click", function(){
-		return false;
-	}); */
-});
+	$(function() {
+		/* $("#login").on("click", function(){
+			return false;
+		}); */
+	});
 </script>
 

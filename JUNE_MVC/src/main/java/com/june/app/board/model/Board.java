@@ -8,6 +8,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.persistence.Transient;
 import javax.validation.constraints.NotNull;
@@ -15,6 +17,7 @@ import javax.validation.constraints.NotNull;
 import org.hibernate.validator.constraints.NotEmpty;
 import org.springframework.web.multipart.MultipartFile;
 
+import com.june.app.cmn.model.Like;
 import com.june.app.cmn.model.Pagination;
 
 /**
@@ -82,7 +85,9 @@ public class Board extends Pagination {
 	@Transient
 	private MultipartFile atchFileIdFile;
 
-	
+	@OneToOne()
+    @JoinColumn(name = "LIKE_ID", insertable=false,updatable=false)
+    private Like like;
 
 	public Integer getNttId() {
 		return nttId;

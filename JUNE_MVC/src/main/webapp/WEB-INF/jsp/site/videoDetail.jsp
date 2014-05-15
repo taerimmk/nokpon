@@ -216,7 +216,7 @@
 														src="//player.vimeo.com/video/32655795?title=0&amp;byline=0&amp;portrait=0"
 														frameborder="0" webkitallowfullscreen=""
 														mozallowfullscreen="" allowfullscreen="" id="fitvid340808"></iframe> -->
-													${video.nttLink }	
+													${video.nttLink }
 												</div>
 											</div>
 
@@ -268,7 +268,7 @@
 									<div class="singlewrap">
 										<article class="main-content">
 											<p>${video.nttCn}</p>
-											
+
 										</article>
 									</div>
 
@@ -304,7 +304,7 @@
 										<form
 											action="http://aonethemes.com/infinitygrid/wp-comments-post.php"
 											method="post" id="commentform" class="comment-form">
-											
+
 											<p class="comment-form-comment">
 												<label for="comment">Comment</label>
 												<textarea id="comment" name="comment" cols="45" rows="8"
@@ -339,9 +339,177 @@
 									</div>
 									<!-- #respond -->
 
+									<div class="singlewrap pushpull">
+										8 Comments On This Topic
+										<ol class="commentlist">
 
+											<li
+												class="comment byuser comment-author-aone bypostauthor even thread-even depth-1"
+												id="li-comment-3">
+												<div id="comment-3">
+													<div class="post-wrap rel">
+														<div class="reply_text">
+															<a class="comment-reply-link"
+																href="/infinitygrid/5/?replytocom=3#respond">Reply</a>
+														</div>
+
+
+														<div class="postcontentreply">
+															<div class="comment-guts">
+																<div class="avatar-comments">
+																	<img alt=""
+																		src="http://1.gravatar.com/avatar/97d03de6b0bb7d7f8d4ba2475549dfd4?s=64&amp;d=&amp;r=G"
+																		class="avatar avatar-64 photo" height="64" width="64">
+																</div>
+
+																<div class="comment-guts-pads">
+																	<!--  <div class="carrot-comment"></div> -->
+
+																	<div class="says">Aone</div>
+
+																	<div class="says">
+																		<span class="says_date"> 3 months ago</span>
+																	</div>
+
+																	<p>Lorem ipsum dolor sit amet, consectetuer
+																		adipiscing elit. Aenean commodo ligula eget dolor.
+																		Aenean massa. Cum sociis natoque penatibus et magnis
+																		dis parturient montes, nascetur ridiculus mus.</p>
+																</div>
+															</div>
+														</div>
+														<!-- END postcontentreply -->
+
+													</div>
+													<!-- END comment -->
+												</div> <!--end entire post wrap-->
+											</li>
+
+											<!-- .children -->
+											<!-- #comment-## -->
+
+											<li class="comment odd alt thread-odd thread-alt depth-1"
+												id="li-comment-12">
+												<div id="comment-12">
+													<div class="post-wrap rel">
+														<div class="reply_text">
+															<a class="comment-reply-link"
+																href="/infinitygrid/5/?replytocom=12#respond">Reply</a>
+														</div>
+
+
+														<div class="postcontentreply">
+															<div class="comment-guts">
+																<div class="avatar-comments">
+																	<img alt=""
+																		src="http://1.gravatar.com/avatar/7654021924db58debede0a558222d8a5?s=64&amp;d=&amp;r=G"
+																		class="avatar avatar-64 photo" height="64" width="64">
+																</div>
+
+																<div class="comment-guts-pads">
+																	<!--  <div class="carrot-comment"></div> -->
+
+																	<div class="says">ほほう</div>
+
+																	<div class="says">
+																		<span class="says_date"> 3 months ago</span>
+																	</div>
+
+																	<p>それで</p>
+																</div>
+															</div>
+														</div>
+														<!-- END postcontentreply -->
+
+													</div>
+													<!-- END comment -->
+												</div> <!--end entire post wrap-->
+											</li>
+											<!-- #comment-## -->
+
+											<li class="comment even thread-even depth-1"
+												id="li-comment-26">
+												<div id="comment-26">
+													<div class="post-wrap rel">
+														<div class="reply_text">
+															<a class="comment-reply-link"
+																href="/infinitygrid/5/?replytocom=26#respond">Reply</a>
+														</div>
+
+
+														<div class="postcontentreply">
+															<div class="comment-guts">
+																<div class="avatar-comments">
+																	<img alt=""
+																		src="http://0.gravatar.com/avatar/8378a47a5f4a901d23222cef70df3203?s=64&amp;d=&amp;r=G"
+																		class="avatar avatar-64 photo" height="64" width="64">
+																</div>
+
+																<div class="comment-guts-pads">
+																	<!--  <div class="carrot-comment"></div> -->
+
+																	<div class="says">Some name</div>
+
+																	<div class="says">
+																		<span class="says_date"> 3 months ago</span>
+																	</div>
+
+																	<p>Test comment.</p>
+																</div>
+															</div>
+														</div>
+														<!-- END postcontentreply -->
+
+													</div>
+													<!-- END comment -->
+												</div> <!--end entire post wrap-->
+											</li>
+											<!-- #comment-## -->
+
+											<li class="comment odd alt thread-odd thread-alt depth-1"
+												id="li-comment-28">
+												<div id="comment-28">
+													<div class="post-wrap rel">
+														<div class="reply_text">
+															<a class="comment-reply-link"
+																href="/infinitygrid/5/?replytocom=28#respond">Reply</a>
+														</div>
+
+
+														<div class="postcontentreply">
+															<div class="comment-guts">
+																<div class="avatar-comments">
+																	<img alt=""
+																		src="http://1.gravatar.com/avatar/b2d7d2d13aed54c2ed7feb538b382b42?s=64&amp;d=&amp;r=G"
+																		class="avatar avatar-64 photo" height="64" width="64">
+																</div>
+
+																<div class="comment-guts-pads">
+																	<!--  <div class="carrot-comment"></div> -->
+
+																	<div class="says">qweqwe</div>
+
+																	<div class="says">
+																		<span class="says_date"> 3 months ago</span>
+																	</div>
+
+																	<p>eeeeeeeeeeeee</p>
+																</div>
+															</div>
+														</div>
+														<!-- END postcontentreply -->
+
+													</div>
+													<!-- END comment -->
+												</div> <!--end entire post wrap-->
+											</li>
+											<!-- #comment-## -->
+										</ol>
+									</div>
 
 								</div>
+
+
 							</div>
 							<!--end col8-->
 

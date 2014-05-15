@@ -26,10 +26,8 @@
 
 <script type='text/javascript'
 	src="<c:url value="/resources/js/jquery/jquery-1.11.0.min.js"/>"></script>
-<%-- <script type='text/javascript'
-	src="<c:url value="/resources/js/jquery/jquery-migrate-1.2.1.min.js"/>"></script> --%>
-
-
+<script type='text/javascript'
+	src="<c:url value="/resources/js/jquery/jquery-migrate-1.2.1.min.js"/>"></script>
 
 <meta name="generator" content="WordPress 3.8.3" />
 <style type="text/css" class="options-output">

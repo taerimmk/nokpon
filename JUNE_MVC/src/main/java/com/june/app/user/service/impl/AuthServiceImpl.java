@@ -12,7 +12,6 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 import com.june.app.user.model.RoleInfo;
 import com.june.app.user.model.UserInfo;
@@ -32,7 +31,7 @@ public class AuthServiceImpl implements AuthService, UserDetailsService {
         this.userRepository = userRepository;
     }
 
-	@Transactional
+	//@Transactional
 	@Override
 	public UserDetails loadUserByUsername(String userId)
 			throws UsernameNotFoundException {
