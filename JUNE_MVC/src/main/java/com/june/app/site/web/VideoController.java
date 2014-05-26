@@ -34,7 +34,7 @@ public class VideoController {
 			Model model) {
 		logger.debug("=====] call getVideoList [=====");
 		/**페이지당 보여주는 게시물 수*/
-		video.setPageSize(2);
+		video.setPageSize(9);
 		/**현재 페이지*/
 		video.setPageIndex(pageIndex);
 		Map<?,?> videoList = videoService.videoListWithPaging(video);

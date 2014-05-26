@@ -2,13 +2,11 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
 	pageEncoding="utf-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-
-
-
 <!doctype html>
 <html lang="en-US">
 <head>
 <jsp:include page="/WEB-INF/jsp/cmn/inc/headerResource.jsp" />
+
 
 </head>
 <body class="home blog">
@@ -233,21 +231,17 @@
 										<div class="row">
 											<div class="col-xs-9">
 												<div class="cellblock text-left">
-													Posted By <a
+													올린이 <a
 														href="http://aonethemes.com/infinitygrid/author/aone/"
 														title="Posts by Aone" rel="author">${video.user.userId}</a>
 												</div>
-												<!-- <div class="cellblock text-left">
-													/ in <a
-														href="http://aonethemes.com/infinitygrid/category/post-formats/"
-														title="View all posts in Post formats" rel="category tag">Post
-														formats</a>,<a
-														href="http://aonethemes.com/infinitygrid/category/video-clips/"
-														title="View all posts in Video clips" rel="category tag">Video
-														clips</a>
+												<div class="cellblock text-left">
+													/ 올린날 <a
+														href="#"
+														title="" rel="category tag">${video.regiDate}</a>
 												</div>
 
-												<div class="cellblock text-left">
+												<!-- <div class="cellblock text-left">
 													/ tags <a
 														href="http://aonethemes.com/infinitygrid/tag/video-format/"
 														rel="tag">Video format</a>, <a
@@ -268,7 +262,9 @@
 									<div class="singlewrap">
 										<article class="main-content">
 											<p>${video.nttCn}</p>
-
+											<p class="form-submit">
+												<input name="" type="button" id="goList" class="submit" value="목록으로" />
+											</p>
 										</article>
 									</div>
 
@@ -288,11 +284,22 @@
 											</div>
 										</div>
 									</div> -->
-									<div class="row"></div>
+									<div class="row">
+								
+									<!-- <div class="col-md-4 col-md-offset-4">
+										<div class="pagination-load-more">
+											<div class="pagination-me centertext">
+												<a href="http://aonethemes.com/infinitygrid/2014/01/page/2/">목록으로</a>
+											</div>
+
+											<span class="pagination-span-load"></span>
+										</div>
+									</div> -->
+									</div>
 									<!--end row-->
 									<!-- You can start editing here. -->
 									<!-- If comments are open, but there are no comments. -->
-
+			
 
 									<div id="respond" class="comment-respond">
 										<h3 id="reply-title" class="comment-reply-title">
@@ -338,7 +345,7 @@
 										</form>
 									</div>
 									<!-- #respond -->
-
+									
 									<div class="singlewrap pushpull">
 										8 Comments On This Topic
 										<ol class="commentlist">
@@ -683,5 +690,14 @@
 	</div>
 	<!--end entiresite wrap-->
 	<jsp:include page="/WEB-INF/jsp/cmn/inc/footerResource.jsp" />
+<script type="text/javascript">
+$(function() {
+	$("#goList").on("click",function() {
+		var action = '<c:url value="/site/video/list/${video.pageIndex}" />';
+		location.href = action;
+		return false;
+	});
+});
+	</script>	
 </body>
 </html>
