@@ -175,7 +175,6 @@ color :red;
 				//document.frm.submit();
 				
 				 var val = validation();
-				console.log("##"+val);
 				if (val){
 					$("#frm").attr("action", "<c:url value='/register/registerUser'/>").submit();	
 				}
